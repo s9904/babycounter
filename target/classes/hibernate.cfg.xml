@@ -24,6 +24,6 @@
    
     <property name="hbm2ddl.auto">create</property>
     
-   
+   	<mapping class="adamtworz.babycounter.businessObjects.Measurement" />
     </session-factory>
 </hibernate-configuration>
