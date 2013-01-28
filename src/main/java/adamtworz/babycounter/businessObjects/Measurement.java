@@ -1,11 +1,14 @@
 package adamtworz.babycounter.businessObjects;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table (name="measurement")
 public class Measurement {
-	@Id
+	@Id @GeneratedValue
 	private int ID;
 	private String date;
 	private double weight;
@@ -34,5 +37,9 @@ public class Measurement {
 	}
 	public void setLength(int length) {
 		this.length = length;
+	}
+	public String print() {
+		return date+": "+length+"cm, "+weight+"kg";
+		
 	}
 }
